@@ -1,0 +1,75 @@
+name:                arc
+version:             0.1.0.0
+github:              "dselsam/arc"
+license:             Apache-2.0
+author:              "Daniel Selsam, Ryan Krueger, Jesse Michael Han"
+maintainer:          "daniel.selsam@protonmail.com"
+copyright:           "2020 Microsoft Corporation"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/dselsam/arc#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- vector
+- union-find
+- bytestring
+- mtl
+- pqueue
+- containers
+- hspec
+- cmdargs
+- filepath
+- extra
+- directory
+- hashtables
+- fail
+- sort
+- deepseq
+- pooled-io
+- hashtables
+- vector-instances
+- hashable
+- transformers
+- time
+- githash
+- vector-th-unbox
+- data-default
+- random
+
+library:
+  source-dirs: src
+
+executables:
+  solve1:
+    main:                Main.hs
+    source-dirs:         app/solve1
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - arc
+
+  run-all:
+    main:                Main.hs
+    source-dirs:         app/run-all
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - arc

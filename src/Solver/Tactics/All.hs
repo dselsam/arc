@@ -1,0 +1,96 @@
+-- Copyright (c) 2020 Microsoft Corporation. All rights reserved.
+-- Released under Apache 2.0 license as described in the file LICENSE.
+-- Authors: Daniel Selsam, Ryan Krueger, Jesse Michael Han.
+
+module Solver.Tactics.All (
+    identity
+  , duplicate
+  , partition
+  , downscale
+  , exactSubgrid
+  , removeOutputSymmetries
+  , symmetrifyGrid
+  , focusImputeRectangle
+  , imputeBlanksByTiling
+  , imputeBlanksLocal
+  , sanityCheckGoal
+  , sanityCheckGuesses
+  , alignAxesLines
+  , alignAxesDims
+  , colorMap
+  , inputSymmetries
+  , motion
+  , gravity
+  , compressInputs
+  , focus
+  , embed
+  , dyeInputs
+  , removeBackground
+  , fillInteriors
+  , upscale
+  , denoise
+  , colorPartition
+  , permutation
+  , categorical
+  , boolean
+  , split
+  , synthInt
+  , classifyIndices
+  , shapeMap
+  , monsterBlast
+  , colorBlast
+  , axesBlast
+  , neighborBlast
+  , rayBlast
+  , modBlast
+  , shapeFeatureBlast
+  , connectUniform
+  , constOutput
+  , intersectionBlast
+  ) where
+
+import Solver.Tactics.Identity
+import Solver.Tactics.Duplicate
+import Solver.Tactics.Partition
+import Solver.Tactics.Downscale
+import Solver.Tactics.GuessDims
+import Solver.Tactics.ExactSubgrid
+import Solver.Tactics.RemoveOutputSymmetries
+import Solver.Tactics.SanityCheck
+import Solver.Tactics.AlignAxes
+import Solver.Tactics.ColorMap
+import Solver.Tactics.InputSymmetries
+import Solver.Tactics.CompressInputs
+import Solver.Tactics.Focus
+import Solver.Tactics.Motion
+import Solver.Tactics.DyeInputs
+import Solver.Tactics.FillInteriors
+import Solver.Tactics.RemoveBackground
+import Solver.Tactics.Upscale
+import Solver.Tactics.Denoise
+import Solver.Tactics.ShapeMap
+import Solver.Tactics.SymmetrifyGrid
+import Solver.Tactics.Permutation
+import Solver.Tactics.Categorical
+import Solver.Tactics.Boolean
+import Solver.Tactics.SynthInt
+import Solver.Tactics.Embed
+import Solver.Tactics.ImputeBlanks
+import Solver.Tactics.FocusImputeRectangle
+import Solver.Tactics.FillInteriors
+import Solver.Tactics.ClassifyIndices
+import Solver.Tactics.ConnectUniform
+import Solver.Tactics.ColorPartition
+import Solver.Tactics.ConstOutput
+import Solver.Tactics.Split
+import Solver.Tactics.Gravity
+
+-- Blasts
+import Solver.Tactics.Blast.MonsterBlast.MonsterBlast
+import Solver.Tactics.Blast.BabyBlasts.ColorBlast.ColorBlast
+import Solver.Tactics.Blast.BabyBlasts.AxesBlast.AxesBlast
+import Solver.Tactics.Blast.BabyBlasts.NeighborBlast.NeighborBlast
+import Solver.Tactics.Blast.BabyBlasts.RayBlast.RayBlast
+import Solver.Tactics.Blast.BabyBlasts.ModBlast.ModBlast
+import Solver.Tactics.Blast.BabyBlasts.ShapeFeaturesBlast.ShapeFeaturesBlast
+import Solver.Tactics.Blast.BabyBlasts.IntersectionBlast.IntersectionBlast
